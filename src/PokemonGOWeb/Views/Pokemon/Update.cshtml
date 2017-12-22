@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Editar Pokémon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar Pokémon</h2>
+
+<form>
+    <div class="form-group">
+        <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png" class="img-rounded">
+    </div>
+    <div class="form-group">
+        <label>Alterar o nome</label>
+        <input type="text" class="form-control" value="Pikachu">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputFile">Defina uma nova imagem</label>
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted">Insira a imagem do Pokémon, porém não poderá ser maior que 4 MB.</small>
+    </div>
+    <fieldset class="form-group">
+        <label>Já possuo o Pokémon?</label>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Sim
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                Não
+            </label>
+        </div>
+    </fieldset>
+    <div class="form-group">
+        <label for="exampleSelect1">Tipo de Pokémon</label>
+        <select class="form-control" id="exampleSelect1">
+            <option selected>Elétrico</option>
+            <option>Grama</option>
+            <option>Fogo</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

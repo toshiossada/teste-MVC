@@ -1,0 +1,15 @@
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\PokemonGOCore.dll.config
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\PokemonGOCore.dll
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\PokemonGOCore.pdb
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\EntityFramework.dll
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\EntityFramework.xml
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\obj\Debug\PokemonGOCore.csprojResolveAssemblyReference.cache
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\obj\Debug\PokemonGOCore.Migrations.CreateDB.resources
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\obj\Debug\PokemonGOCore.Migrations.Createpokemontypes.resources
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\obj\Debug\PokemonGOCore.csproj.GenerateResource.Cache
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\obj\Debug\PokemonGOCore.dll
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\obj\Debug\PokemonGOCore.pdb
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Toshi\Desktop\cit\hands-on-dot-net-pokemon\src\PokemonGOCore\bin\Debug\Newtonsoft.Json.xml

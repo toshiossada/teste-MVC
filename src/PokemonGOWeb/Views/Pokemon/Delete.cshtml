@@ -1,0 +1,35 @@
+﻿@model PokemonGOCore.Model.Pokemon
+
+@{
+    ViewBag.Title = "Excluir Pokémon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(function(){
+        $("#excluir").click(function(event) {
+            return confirm('Tem certeza que quer excluir este Pokemon?');
+        });
+    });
+</script>
+
+<h2>Excluir Pokémon</h2>
+
+<form>
+
+    <div class="form-group">
+        <img src="@Model.ImagePath" class="img-rounded">
+    </div>
+    <div class="form-group">
+        <label>Nome: @Model.Name</label>
+    </div>
+    <div class="form-group">
+        <label>Possui Pokémon:
+            @(Model.CurrentHave ? "Sim" : "Não")
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Tipo de Pokémon: @Model.PokemonType.Description</label>
+    </div>
+    <a id="excluir" href="@Url.Action("Delete", "Pokemon", new { id = Model.Id })" class="btn btn-primary">Excluir</a>
+</form>

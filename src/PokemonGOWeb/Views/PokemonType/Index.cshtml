@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Tipos de Pokémon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tipos de Pokemon</h2>
+
+<form class="form-inline">
+    <button type="button" class="btn btn-info" onclick="location.href='@Url.Action("Create", "PokemonType")'">Criar novo tipo de Pokémon</button>
+    <div class="form-group">
+        <input type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-default">Buscar</button>
+</form>
+<table class="table table-striped" style="width:50%">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Description</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Elétrico</td>
+            <td><span class="glyphicon glyphicon-pencil" onclick="location.href='@Url.Action("Update", "PokemonType")'" style="cursor:pointer;"></span></td>
+            <td><span class="glyphicon glyphicon-remove" onclick="location.href='@Url.Action("Delete", "PokemonType")'" style="cursor:pointer;"></span></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Grama</td>
+            <td><span class="glyphicon glyphicon-pencil" onclick="location.href='@Url.Action("Update", "PokemonType")'" style="cursor:pointer;"></span></td>
+            <td><span class="glyphicon glyphicon-remove" onclick="location.href='@Url.Action("Delete", "PokemonType")'" style="cursor:pointer;"></span></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Fogo</td>
+            <td><span class="glyphicon glyphicon-pencil" onclick="location.href='@Url.Action("Update", "PokemonType")'" style="cursor:pointer;"></span></td>
+            <td><span class="glyphicon glyphicon-remove" onclick="location.href='@Url.Action("Delete", "PokemonType")'" style="cursor:pointer;"></span></td>
+        </tr>
+    </tbody>
+</table>

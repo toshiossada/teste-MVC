@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Criar Pokémon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(function () {
+        $.ajax({
+            dataType: "json",
+            type: "GET",
+            url: "/Pokemon/buscarTipo",
+            success: function (obj) {
+                if (obj != null) {
+                    var data = obj;
+                    var selectbox = $('#tipos');
+                    selectbox.find('option').remove();
+                    $.each(data, function (i, d) {
+                        $('<option>').val(d.Id).text(d.Description).appendTo(selectbox);
+                    });
+                }
+
+  
+            }
+        });
+
+        $("#salvar").click(function () {
+            debugger;
+
+            var Nome = $('#nome').val();;
+            var caminho = $("#caminho").val();
+            var tipo = $('#tipos :selected').val();
+
+
+            $.ajax({
+                type: "POST",
+                data: { Name: Nome, ImagePath: caminho, type: tipo },
+                url: "/Pokemon/CadastrarPokemon",
+                success: function (obj) {
+                    debugger;
+                    $("#msg").html("Polkemon " + Nome + " cadastrado com sucesso!");
+                }
+            });
+
+            return;
+        });
+
+
+
+    });
+</script>
+<h2>Criar Pokémon</h2>
+
+<form>
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" class="form-control" placeholder="Inserir o nome">
+    </div>
+    <div class="form-group">
+        <label for="caminho">Imagem</label>
+        <input type="text" id="caminho" class="form-control" placeholder="Caminho da imagem">
+        <small id="fileHelp" class="form-text text-muted">O caminho da imagem deve ser no padrão "/Content/images/001.png".</small>
+    </div>
+  
+    <div class="form-group">
+        <label for="tipos">Tipo de Pokémon</label>
+        <select class="form-control" id="tipos">
+        </select>
+    </div>
+    <a href="@Url.Action("Index", "Pokemon")"><span class="btn">Voltar</span></a>
+    <button type="submit" id="salvar"  class="btn btn-primary">Salvar</button>
+    <div class="row">
+        <span id="msg" style="color:red;" />
+    </div>
+    
+</form>

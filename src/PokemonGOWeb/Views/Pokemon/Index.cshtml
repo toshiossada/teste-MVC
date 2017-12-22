@@ -1,0 +1,80 @@
+﻿@model IEnumerable<PokemonGOCore.Model.Pokemon>
+
+
+@{
+    ViewBag.Title = "Pokémons";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+
+
+</script>
+
+<h2>Pokémons</h2>
+
+<div class="row">
+    <div class="col-lg-3">
+        <a href="@Url.Action("Create", "Pokemon")" class="btn btn-info">Criar Pokémon</a>
+    </div>
+</div>
+<br />
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-lg-3">
+            <input type="text" name="texto" id="texto" placeholder="Digite o nome do Pokemon" class="form-control left">
+        </div>
+        <div class="col-lg-3">
+            <button type="submit" class="btn btn-default left">Buscar</button>
+        </div>
+    </div>
+}
+
+
+@if (Model.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Capturado</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td><img src="@item.ImagePath" style="max-height: 30px;" /></td>
+                    <td>@item.Name</td>
+                    <td>@item.PokemonType.Description</td>
+                    <td>
+                        <a href="@Url.Action("Check", "Pokemon", new { id = item.Id, ischecked = item.CurrentHave })">
+                            <span class="glyphicon
+                                          @(item.CurrentHave ? "glyphicon-check" : "glyphicon-unchecked")
+                                           " style="cursor: pointer;">
+
+                            </span>
+                        </a>
+                    </td>
+
+                    <td><a href="@Url.Action("Editar", "Pokemon", new { id = item.Id })"><span class="glyphicon glyphicon-remove" style="cursor: pointer;"></span></a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <label>Você não tem dados cadastrados.</label>
+}
+
+
+
